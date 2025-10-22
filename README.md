@@ -32,11 +32,3 @@ Each model was assessed using key classification metrics: **Accuracy**, **Precis
 | **Random Forest** | **0.8852** | 0.8182 | **0.9643** | **0.8852** | **0.9513** |
 | Support Vector Machine (SVM) | 0.8525 | 0.8065 | 0.8929 | 0.8475 | 0.9437 |
 | XGBoost | **0.8852** | **0.8387** | 0.9286 | 0.8814 | 0.9351 |
-
-## Run the Code
-
-description
-
-## Pretrained Model
-
-description
