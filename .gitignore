@@ -1,0 +1,80 @@
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.log
+*.tmp
+*.bak
+
+# ================================
+# Virtual Environment
+# ================================
+venv/
+env/
+.venv/
+ENV/
+.ENV/
+
+# ================================
+# Jupyter Notebook Checkpoints
+# ================================
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# ================================
+# System Files
+# ================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ================================
+# VSCode / IDE
+# ================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ================================
+# Data and Results (optional)
+# ================================
+datasets/*.zip
+datasets/*.rar
+datasets/*.7z
+datasets/*.tar
+datasets/*.tar.gz
+datasets/*.data
+datasets/*.bak
+datasets/*.mod
+
+# Optional: keep CSVs if needed
+# !datasets/*.csv
+
+# ================================
+# Model & Output Files
+# ================================
+*.joblib
+*.pkl
+*.sav
+*.h5
+*.pth
+*.pt
+
+results/
+logs/
+cache/
+
+# ================================
+# OS / Misc
+# ================================
+*.swp
+*.swo
+*.bak
+*.tmp
+*.out
+*.~lock*
