@@ -68,6 +68,7 @@ datasets/*.mod
 results/
 logs/
 cache/
+catboost_info/
 
 # ================================
 # OS / Misc
