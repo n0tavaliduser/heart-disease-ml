@@ -69,9 +69,33 @@ def create_models():
         n_jobs=-1
     )
     
+    # Create full stacking ensemble using all models
+    all_estimators = [
+        ('lr', base_models['logistic_regression']),
+        ('rf', base_models['random_forest']),
+        ('svm', base_models['svm']),
+        ('xgb', base_models['xgboost']),
+        ('nn', base_models['neural_network'])
+    ]
+    
+    full_stacking = StackingClassifier(
+        estimators=all_estimators,
+        final_estimator=CatBoostClassifier(
+            iterations=300,  # Increased iterations for better meta-learning
+            learning_rate=0.05,  # Lower learning rate for better generalization
+            random_seed=RANDOM_STATE,
+            verbose=0,
+            depth=5  # Added tree depth control
+        ),
+        cv=5,  # Using 5-fold cross-validation for meta-features
+        n_jobs=-1,
+        passthrough=True  # Include original features alongside meta-features
+    )
+    
     # Add ensemble models
     base_models["stacking"] = stacking
     base_models["voting"] = voting
+    base_models["full_stacking"] = full_stacking
     
     return base_models
 
